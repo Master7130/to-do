@@ -12,4 +12,18 @@
 
 .add-list {
   margin-left: 5%;
+  border:0.1em solid #FFFFFF;
+  transition: 0.3s;
+}
+
+.add-list:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.lists {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, auto));
+  gap: 10px;
 }
