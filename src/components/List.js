@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './List.css'
 import Modal from 'react-modal'
 import TodoItem from './TodoItem';
@@ -12,8 +12,8 @@ export default function List(props, name) {
     function click2(name) {
         var listName = document.getElementById("name-input").value;
 
-        if (listName == "") {
-            listName = "List"
+        if (listName === "") {
+            listName = "Item"
         }
 
         setLists(lists.concat(<TodoItem key={lists.length} name={listName} />));
@@ -37,7 +37,7 @@ export default function List(props, name) {
             </div>
 
             <Modal className="modal" isOpen={modalOpen} onRequestClose={() => setModalOpen(false)}>
-                <h1>New To-do List</h1>
+                <h1>New To-do Item</h1>
 
                 <div>
                     <p>Name</p>

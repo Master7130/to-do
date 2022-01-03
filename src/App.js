@@ -11,7 +11,7 @@ function App() {
   function click2(name) {
     var listName = document.getElementById("name-input").value;
 
-    if (listName == "") {
+    if (listName === "") {
       listName = "List"
     }
 
@@ -24,14 +24,20 @@ function App() {
   // Function to get the current date
   function getDate() {
     var currentDate = new Date();
-    return currentDate.getMonth() + "/" + currentDate.getDate();
+    return currentDate.getMonth() + 1 + "/" + currentDate.getDate();
   }
   // End
 
 
   // Updates time
   var currentDate = new Date();
-  const [time, setTime] = useState(currentDate.getHours() + ":" + currentDate.getMinutes());
+
+  var currentTime = currentDate.getHours() + ":" + currentDate.getMinutes()
+  if (currentDate.getMinutes < 10) {
+    currentTime = currentDate.getHours() + ":0" + currentDate.getMinutes()
+  }
+  const [time, setTime] = useState(currentTime);
+
 
   useEffect(() => {
     setInterval(() => {
@@ -53,7 +59,7 @@ function App() {
         <h2>{time}</h2>
       </div>
 
-      <button onClick={() => setModalOpen(true)} className='add-list'>Add List</button>
+      <button onClick={() => setModalOpen(true)} className='add-list-btn'>Add List</button>
 
 
       <div className='lists'>
@@ -68,8 +74,8 @@ function App() {
           <input id='name-input' type={"text"}></input>
         </div>
 
-        <button onClick={() => click2("name")} className='add-list'>Confirm</button>
-        <button onClick={() => setModalOpen(false)} className='add-list'>Cancel</button>
+        <button onClick={() => click2("name")} className='confirm-list-btn'>Confirm</button>
+        <button onClick={() => setModalOpen(false)} className='cancil-list-btn'>Cancel</button>
       </Modal>
     </div>
   );
