@@ -21,3 +21,13 @@
 @media screen and (max-width: 750px) {
   .list-container { width: 70%; }
 }
+
+.add-list-item, .confirm-item-btn, .cancel-item-btn {
+  margin-left: 5%;
+  border: 0.1em solid #ffffff;
+  transition: 0.3s;
+}
+
+.add-list-item:hover, .confirm-item-btn:hover, .cancel-item-btn:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}

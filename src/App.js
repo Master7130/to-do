@@ -75,7 +75,7 @@ function App() {
         </div>
 
         <button onClick={() => click2("name")} className='confirm-list-btn'>Confirm</button>
-        <button onClick={() => setModalOpen(false)} className='cancil-list-btn'>Cancel</button>
+        <button onClick={() => setModalOpen(false)} className='cancel-list-btn'>Cancel</button>
       </Modal>
     </div>
   );

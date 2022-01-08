@@ -33,7 +33,7 @@ export default function List(props, name) {
                     {lists}
                 </div>
 
-                <button onClick={() => setModalOpen(true)} className='add-list'>Add Item</button>
+                <button onClick={() => setModalOpen(true)} className='add-list-item'>Add Item</button>
             </div>
 
             <Modal className="modal" isOpen={modalOpen} onRequestClose={() => setModalOpen(false)}>
@@ -44,8 +44,8 @@ export default function List(props, name) {
                     <input id='name-input' type={"text"}></input>
                 </div>
 
-                <button onClick={() => click2("name")} className='add-list'>Confirm</button>
-                <button onClick={() => setModalOpen(false)} className='add-list'>Cancel</button>
+                <button onClick={() => click2("name")} className='confirm-item-btn'>Confirm</button>
+                <button onClick={() => setModalOpen(false)} className='cancel-item-btn'>Cancel</button>
             </Modal>
         </>
     )
