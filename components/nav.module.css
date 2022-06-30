@@ -17,3 +17,7 @@
 .nav_item {
     font-size: large;
 }
+
+.nav_item:hover {
+    cursor: pointer;
+}
